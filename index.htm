@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcadia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+        section {
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .textos {
+    font-family: 'RainyHearts', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+        .titulos {
+            font-family: 'RainyHearts', sans-serif;
+    font-size: 50px;
+    color: #994FFE;
+        }
+        @font-face {
+    font-family: 'RainyHearts';
+    src: url('fonts/rainyhearts.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+        .batocera {
+            color: #23ADFB;
+        }
+
+        .botao-musica {
+            background-color: #C1C1C1;
+            font-family: 'RainyHearts', sans-serif;
+            color: black;
+}
+
+ /* 🔐 Estilização da Seção de Login */
+ .login-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 10px;
+        border-radius: 8px;
+        display: flex;
+        gap: 5px;
+    }
+
+    .login-input {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .login-button {
+        background-color: #994FFE;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .login-button:hover {
+        background-color: #7A3BCC;
+    }
+
+    .logo-senac {
+        max-width: 100%;
+        height: auto;
+        width: 200px;
+        display: block;
+        margin: 20px auto; /* Centraliza a imagem */
+        border-radius: 10px; /* Borda arredondada opcional */
+        transition: transform 0.2s;
+    }
+
+    .logo-senac:hover {
+        transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <section class="container">
+            <img src="imagens/Arcadia.gif" alt="Nome da Empresa" style="max-width: 100%; height: auto;">
+        </section>
+        
+        <!-- 🎵 Controles de Música -->
+        <audio id="musica" loop>
+            <source src="musicas/Grape Garden.mp3" type="audio/mpeg">
+        </audio>
+        <button class="botao-musica" onclick="document.getElementById('musica').play()">🎵 Tocar Música</button>
+        <button class="botao-musica" onclick="document.getElementById('musica').pause()">⏸️ Pausar Música</button>
+    
+        <!-- 🔐 Seção de Login -->
+        <div class="login-container">
+            <input type="text" placeholder="Usuário" class="login-input">
+            <input type="password" placeholder="Senha" class="login-input">
+            <button class="login-button">Entrar</button>
+        </div>
+
+    </header>
+    <section class="container textos">
+        <h1 class="titulos">Sobre o Arcadia</h1>
+        <p>O <span class="batocera">Arcadia</span> é um fliperama desenvolvido pela equipe T8Bits do Técnico em Informática 
+            para Projeto Integrador de Hardware do SENAC de Pindamonhangaba. Ele utiliza o sistema operacional 
+            <span class="batocera">Batocera</span>, uma
+            distribuição gratuita de jogos retrô de código aberto que pode ser copiada para um cartão SD ou 
+            pendrive USB, transformando qualquer computador em uma espécie de console de jogos.
+            A tematização, abertura e toda a apresentação do Batocera foi modificada para ter toda a nossa 
+            identidade marcada, dando origem ao Arcadia. Seu nome foi escolhido através de votações por 
+            ter boa sonoridade, além de seu significado fornecer uma boa tematização para o fliperama em si. <br>
+            <br>
+            >Imagem/Vídeo do Arcadia<
+        </p>
+    </section>
+    <section class="container textos">
+        <h2 class="titulos">Processo de Produção do Arcadia</h2>
+        <p>Um fliperama por si só já era uma ideia do próprio SENAC para ser implementada, então a turma
+            T8 do Técnico em Informática agarrou esta oportunidade e começou a trabalhar neste ambicioso
+            projeto! <br> <br>
+            >Imagens/Vídeos do processo de produção<
+            <br> <br>
+            Como dito anteriormente, utilizamos o Batocera como sistema operacional para o Arcadia, mas não
+            foi algo de imediato. Testamos vários outros sistemas, como RetroPie, RetroArch, RetroBat, entre outros...
+            até chegarmos no consenso de utilizar o Batocera, por fornecer melhores opções de navegação e customização.
+            O nome da equipe: "T8Bits" surgiu através de um trocadilho feito com o nome da turma em si (T8) e 8-bits, que
+            são os números de bits presentes em jogos retrôs (Como jogos de Nintendo Entertainment System)
+
+
+        </p>
+    </section>
+    <section class="container textos">
+    <h2 class="titulos">Saiba Mais</h2>
+    <a href="https://www.sp.senac.br/" target="_blank">
+        <img src="imagens/Senac.png" alt="Saiba Mais" class="logo-senac">
+    </a>
+</section>
+    <footer>
+        <p>&copy; 2025 SENAC-Pinda. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+</head>
+<body>
+    
+</body>
+</html>
