@@ -163,43 +163,65 @@
         }
     }
 
+    /* 🔹 Estilização do Link "Página Inicial" */
+    .pagina-inicial {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-family: 'RainyHearts', sans-serif;
+    }
+
+    .pagina-inicial a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #F2D541;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    .pagina-inicial a:hover {
+        color: #23ADFB;
+    }
+
+    /* 🔹 Responsividade */
+    @media (max-width: 768px) {
+        .pagina-inicial {
+            top: 10px;
+            left: 10px;
+            padding: 8px 12px;
+        }
+
+        .pagina-inicial a {
+            font-size: 14px;
+        }
+    }
+
     </style>
 </head>
 <body>
     <header>
+         <!-- 🔹 Link "Página Inicial" no canto superior esquerdo -->
+    <div class="pagina-inicial">
+        <a href="index.htm">Página Inicial</a>
+    </div>
+    
         <section class="container">
             <img src="imagens/Arcadia.gif" alt="Nome da Empresa" style="max-width: 100%; height: auto;">
         </section>
         
         <!-- 🎵 Controles de Música -->
         <audio id="musica" loop>
-            <source src="musicas/Grape Garden.mp3" type="audio/mpeg">
+            <source src="musicas/Toy Tracks.m4a" type="audio/mpeg">
         </audio>
         <button class="botao-musica" onclick="document.getElementById('musica').play()">🎵 Tocar Música</button>
         <button class="botao-musica" onclick="document.getElementById('musica').pause()">⏸️ Pausar Música</button>
-    
-        <!-- 🔐 Seção de Login -->
-        <div class="login-container">
-            <input type="text" placeholder="Usuário" class="login-input">
-            <input type="password" placeholder="Senha" class="login-input">
-            <button class="login-button">Entrar</button>
-        </div>
 
     </header>
-    <section class="container textos">
-        <h1 class="titulos">Sobre o Arcadia</h1>
-        <p>O <span class="batocera">Arcadia</span> é um fliperama desenvolvido pela equipe T8Bits do Técnico em Informática 
-            para Projeto Integrador de Hardware do SENAC de Pindamonhangaba. Ele utiliza o sistema operacional 
-            <span class="batocera">Batocera</span>, uma
-            distribuição gratuita de jogos retrô de código aberto que pode ser copiada para um cartão SD ou 
-            pendrive USB, transformando qualquer computador em uma espécie de console de jogos.
-            A tematização, abertura e toda a apresentação do Batocera foi modificada para ter toda a nossa 
-            identidade marcada, dando origem ao Arcadia. Seu nome foi escolhido através de votações por 
-            ter boa sonoridade, além de seu significado fornecer uma boa tematização para o fliperama em si. <br>
-            <br>
-            >Imagem/Vídeo do Arcadia<
-        </p>
-    </section>
+    
+
     <section class="container textos">
         <h2 class="titulos">Processo de Produção do Arcadia</h2>
         <p>Um fliperama por si só já era uma ideia do próprio SENAC para ser implementada, então a turma
@@ -226,7 +248,6 @@
         <div class="footer-column">
             <h3>Sobre</h3>
             <a href="nossa_historia.htm">Nossa História</a>
-            <a href="producao.htm">Processo de Produção</a>
             <a href="equipe.htm">Equipe</a>
         </div>
 

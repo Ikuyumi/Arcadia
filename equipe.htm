@@ -163,58 +163,208 @@
         }
     }
 
+    /* 🔹 Estilização do Link "Página Inicial" */
+    .pagina-inicial {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-family: 'RainyHearts', sans-serif;
+    }
+
+    .pagina-inicial a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #F2D541;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    .pagina-inicial a:hover {
+        color: #23ADFB;
+    }
+
+    /* 🔹 Responsividade */
+    @media (max-width: 768px) {
+        .pagina-inicial {
+            top: 10px;
+            left: 10px;
+            padding: 8px 12px;
+        }
+
+        .pagina-inicial a {
+            font-size: 14px;
+        }
+    }
+
+       /* 🔹 Seção de Avatares */
+    .avatares {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .avatares-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .avatar {
+        background-color: #222;
+        padding: 20px;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .avatar img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #994FFE;
+    }
+
+    .avatar h3 {
+        color: white;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    /* 🔹 Efeito ao passar o mouse */
+    .avatar:hover {
+        transform: scale(1.08);
+        box-shadow: 0px 0px 10px #994FFE;
+    }
+
+    /* 🔹 Responsividade */
+    @media (max-width: 1024px) {
+        .avatares-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .avatares-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .avatares-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
     </style>
 </head>
 <body>
     <header>
+         <!-- 🔹 Link "Página Inicial" no canto superior esquerdo -->
+    <div class="pagina-inicial">
+        <a href="index.htm">Página Inicial</a>
+    </div>
+    
         <section class="container">
             <img src="imagens/Arcadia.gif" alt="Nome da Empresa" style="max-width: 100%; height: auto;">
         </section>
         
         <!-- 🎵 Controles de Música -->
         <audio id="musica" loop>
-            <source src="musicas/Grape Garden.mp3" type="audio/mpeg">
+            <source src="musicas/Game of Lamb.mp3" type="audio/mpeg">
         </audio>
         <button class="botao-musica" onclick="document.getElementById('musica').play()">🎵 Tocar Música</button>
         <button class="botao-musica" onclick="document.getElementById('musica').pause()">⏸️ Pausar Música</button>
-    
-        <!-- 🔐 Seção de Login -->
-        <div class="login-container">
-            <input type="text" placeholder="Usuário" class="login-input">
-            <input type="password" placeholder="Senha" class="login-input">
-            <button class="login-button">Entrar</button>
-        </div>
 
     </header>
-    <section class="container textos">
-        <h1 class="titulos">Sobre o Arcadia</h1>
-        <p>O <span class="batocera">Arcadia</span> é um fliperama desenvolvido pela equipe T8Bits do Técnico em Informática 
-            para Projeto Integrador de Hardware do SENAC de Pindamonhangaba. Ele utiliza o sistema operacional 
-            <span class="batocera">Batocera</span>, uma
-            distribuição gratuita de jogos retrô de código aberto que pode ser copiada para um cartão SD ou 
-            pendrive USB, transformando qualquer computador em uma espécie de console de jogos.
-            A tematização, abertura e toda a apresentação do Batocera foi modificada para ter toda a nossa 
-            identidade marcada, dando origem ao Arcadia. Seu nome foi escolhido através de votações por 
-            ter boa sonoridade, além de seu significado fornecer uma boa tematização para o fliperama em si. <br>
-            <br>
-            >Imagem/Vídeo do Arcadia<
-        </p>
-    </section>
-    <section class="container textos">
-        <h2 class="titulos">Processo de Produção do Arcadia</h2>
-        <p>Um fliperama por si só já era uma ideia do próprio SENAC para ser implementada, então a turma
-            T8 do Técnico em Informática agarrou esta oportunidade e começou a trabalhar neste ambicioso
-            projeto! <br> <br>
-            >Imagens/Vídeos do processo de produção<
-            <br> <br>
-            Como dito anteriormente, utilizamos o Batocera como sistema operacional para o Arcadia, mas não
-            foi algo de imediato. Testamos vários outros sistemas, como RetroPie, RetroArch, RetroBat, entre outros...
-            até chegarmos no consenso de utilizar o Batocera, por fornecer melhores opções de navegação e customização.
-            O nome da equipe: "T8Bits" surgiu através de um trocadilho feito com o nome da turma em si (T8) e 8-bits, que
-            são os números de bits presentes em jogos retrôs (Como jogos de Nintendo Entertainment System)
+    
 
+    <section class="container textos avatares">
+        <h2 class="titulos">Equipe do Arcadia</h2>
 
-        </p>
+        <div class="avatares-grid">
+            <!-- 🔹 Avatar 1 -->
+            <div class="avatar">
+                <img src="imagens/avatar1.jpg" alt="Avatar 1">
+                <h3>Nome do Avatar 1</h3>
+            </div>
+    
+            <!-- 🔹 Avatar 2 -->
+            <div class="avatar">
+                <img src="imagens/avatar2.jpg" alt="Avatar 2">
+                <h3>Nome do Avatar 2</h3>
+            </div>
+    
+            <!-- 🔹 Avatar 3 -->
+            <div class="avatar">
+                <img src="imagens/avatar3.jpg" alt="Avatar 3">
+                <h3>Nome do Avatar 3</h3>
+            </div>
+    
+            <!-- 🔹 Avatar 4 -->
+            <div class="avatar">
+                <img src="imagens/avatar4.jpg" alt="Avatar 4">
+                <h3>Nome do Avatar 4</h3>
+            </div>
+    
+            <!-- 🔹 Avatar 5 -->
+            <div class="avatar">
+                <img src="imagens/avatar5.jpg" alt="Avatar 5">
+                <h3>Nome do Avatar 5</h3>
+            </div>
+    
+            <!-- 🔹 Avatar 6 -->
+            <div class="avatar">
+                <img src="imagens/avatar6.jpg" alt="Avatar 6">
+                <h3>Nome do Avatar 6</h3>
+            </div>
+    
+            <!-- 🔹 Avatar 7 -->
+            <div class="avatar">
+                <img src="imagens/avatar7.jpg" alt="Avatar 7">
+                <h3>Nome do Avatar 7</h3>
+            </div>
+    
+            <!-- 🔹 Avatar 8 -->
+            <div class="avatar">
+                <img src="imagens/avatar8.jpg" alt="Avatar 8">
+                <h3>Nome do Avatar 8</h3>
+            </div>
+    
+            <!-- 🔹 Avatar 9 -->
+            <div class="avatar">
+                <img src="imagens/avatar9.jpg" alt="Avatar 9">
+                <h3>Nome do Avatar 9</h3>
+            </div>
+    
+            <!-- 🔹 Avatar 10 -->
+            <div class="avatar">
+                <img src="imagens/avatar10.jpg" alt="Avatar 10">
+                <h3>Nome do Avatar 10</h3>
+            </div>
+    
+            <!-- 🔹 Avatar 11 -->
+            <div class="avatar">
+                <img src="imagens/avatar11.jpg" alt="Avatar 11">
+                <h3>Nome do Avatar 11</h3>
+            </div>
+    
+            <!-- 🔹 Avatar 12 -->
+            <div class="avatar">
+                <img src="imagens/avatar12.jpg" alt="Avatar 12">
+                <h3>Nome do Avatar 12</h3>
+            </div>
+
+            <!-- 🔹 Avatar 13 -->
+            <div class="avatar">
+                <img src="imagens/avatar13.jpg" alt="Avatar 13">
+                <h3>Nome do Avatar 12</h3>
+            </div>
+    
+
     </section>
     <!-- <section class="container textos">
     <h2 class="titulos">Saiba Mais</h2>
@@ -227,7 +377,6 @@
             <h3>Sobre</h3>
             <a href="nossa_historia.htm">Nossa História</a>
             <a href="producao.htm">Processo de Produção</a>
-            <a href="equipe.htm">Equipe</a>
         </div>
 
         <!-- 🔹 Coluna 2: Contato -->
