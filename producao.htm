@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arcadia</title>
+    <title>Produção</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -40,6 +43,11 @@
     font-size: 30px;
     color: white;
 }
+
+.textos2 {
+            font-family: 'RainyHearts', sans-serif;
+    color: #914BF2;
+        }
 
         .titulos {
             font-family: 'RainyHearts', sans-serif;
@@ -98,7 +106,7 @@
     .logo-senac {
         max-width: 100%;
         height: auto;
-        width: 100px;
+        width: 200px;
         display: block;
         margin: 20px auto; /* Centraliza a imagem */
         border-radius: 10px; /* Borda arredondada opcional */
@@ -199,22 +207,102 @@
         }
     }
 
+      /* 🔹 Sidebar */
+      .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 250px;
+            background-color: #222;
+            color: white;
+            padding: 15px;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* 🔹 Sidebar ativa */
+        .sidebar.show {
+            transform: translateX(0);
+        }
+
+        /* 🔹 Ícone do menu */
+        .menu-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* 🔹 Lista de Links */
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background: #222;
+        }
+
+
     </style>
 </head>
 <body>
+
+    <!-- Botão de Toggle -->
+    <button class="menu-btn" id="toggleSidebar">
+        <i class="bi bi-list"></i> <!-- Ícone do Bootstrap -->
+    </button>
+
+    <!-- Sidebar -->
+    <nav class="sidebar textos2" id="sidebar">
+        <h4 class="titulos">Menu</h4>
+        <ul>
+            <li><a href="index.htm"><i class="bi bi-house-door-fill"></i> Início</a></li>
+            <li><a href="equipe.htm"><i class="bi bi-people-fill"></i> Equipe T8Bits</a></li>
+            <li><a href="instalando_batocera.htm"><i class="bi bi-download"></i> Instalando Batocera</a></li>
+            <li><a href="perguntas_e_respostas.htm"><i class="bi bi-patch-question-fill"></i> Perguntas e Respostas</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        // Script para abrir/fechar a sidebar
+        document.getElementById("toggleSidebar").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.toggle("show");
+        });
+    </script>
+
     <header>
          <!-- 🔹 Link "Página Inicial" no canto superior esquerdo -->
-    <div class="pagina-inicial">
+    <!-- <div class="pagina-inicial">
         <a href="index.htm">Página Inicial</a>
     </div>
-    
+     -->
         <section class="container">
             <img src="imagens/Arcadia.gif" alt="Nome da Empresa" style="max-width: 100%; height: auto;">
         </section>
         
         <!-- 🎵 Controles de Música -->
         <audio id="musica" loop>
-            <source src="musicas/Toy Tracks.m4a" type="audio/mpeg">
+            <source src="musicas/Leaning Dream.mp3" type="audio/mpeg">
         </audio>
         <button class="botao-musica" onclick="document.getElementById('musica').play()">🎵 Tocar Música</button>
         <button class="botao-musica" onclick="document.getElementById('musica').pause()">⏸️ Pausar Música</button>
@@ -232,9 +320,6 @@
             Como dito anteriormente, utilizamos o Batocera como sistema operacional para o Arcadia, mas não
             foi algo de imediato. Testamos vários outros sistemas, como RetroPie, RetroArch, RetroBat, entre outros...
             até chegarmos no consenso de utilizar o Batocera, por fornecer melhores opções de navegação e customização.
-            O nome da equipe: "T8Bits" surgiu através de um trocadilho feito com o nome da turma em si (T8) e 8-bits, que
-            são os números de bits presentes em jogos retrôs (Como jogos de Nintendo Entertainment System)
-
 
         </p>
     </section>
@@ -244,27 +329,9 @@
 
 <footer>
     <div class="footer-container">
-        <!-- 🔹 Coluna 1: Sobre -->
-        <div class="footer-column">
-            <h3>Sobre</h3>
-            <a href="nossa_historia.htm">Nossa História</a>
-            <a href="equipe.htm">Equipe</a>
-        </div>
 
-        <!-- 🔹 Coluna 2: Contato -->
-        <!-- <div class="footer-column">
-            <h3>Contato</h3>
-            <a href="mailto:contato@email.com">Email</a>
-            <a href="tel:+5511999999999">Telefone</a>
-            <a href="#">Localização</a>
-        </div> -->
-
-        <!-- 🔹 Coluna 3: Redes Sociais -->
+        <!-- LOGO do SENAC -->
         <div class="footer-column">
-            <h3>Redes Sociais</h3>
-            <!-- <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a> -->
             <a href="https://www.sp.senac.br/" target="_blank">
                 <img src="imagens/Senac.png" alt="Saiba Mais" class="logo-senac">
             </a>
