@@ -112,7 +112,7 @@
         .logo-senac {
             max-width: 100%;
             height: auto;
-            width: 100px;
+            width: 200px;
             display: block;
             margin: 20px auto;
             /* Centraliza a imagem */
@@ -309,12 +309,66 @@
         .cor_estrelas {
             color: #5681A6
         }
+
+        .video-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Garante que a seção tenha no mínimo a altura da tela */
+    overflow: visible; /* Permite que o conteúdo se expanda */
+}
+
+.video-section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o vídeo */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra toda a área sem cortes estranhos */
+}
+
+.video-overlay {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 50px; /* Dá espaço extra para o conteúdo */
+    overflow: visible;
+}
+
+.video-overlay h2 {
+    padding-top: 50px; /* Ajuste conforme necessário */
+}
+
+.container.avatares {
+    padding-bottom: 100px; /* Garante que os avatares inferiores não fiquem cortados */
+}
+
+.text-box {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto com leve transparência */
+    color: white;
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center;
+    max-width: 80%;
+    margin: 20px auto; /* Centraliza o bloco */
+}
+
     </style>
 </head>
 
 <body>
 
-    <!-- Botão de Toggle -->
+
+<header>
+
+    <section class="video-section">
+        <video autoplay loop muted playsinline>
+            <source src="videos/Opening-Batocera.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+        <div class="video-overlay">
+
+             <!-- Botão de Toggle -->
     <button class="menu-btn" id="toggleSidebar">
         <i class="bi bi-list"></i> <!-- Ícone do Bootstrap -->
     </button>
@@ -336,121 +390,108 @@
         document.getElementById("sidebar").classList.toggle("show");
     });
 </script>
-
-<header>
-
-   <section class="container">
-       <img src="imagens/Arcadia.gif" alt="Nome da Empresa" style="max-width: 100%; height: auto;">
-   </section>
-   
-   <!-- 🎵 Controles de Música -->
-   <audio id="musica" loop>
-       <source src="musicas/Game of Lamb.mp3" type="audio/mpeg">
-   </audio>
-   <button class="botao-musica" onclick="document.getElementById('musica').play()">🎵 Tocar Música</button>
-   <button class="botao-musica" onclick="document.getElementById('musica').pause()">⏸️ Pausar Música</button>
+            
+            <h2 class="titulos">Nossos Avatares</h2>
+            <section class="container avatares">
+        
+                <div class="row justify-content-center mt-10">
+                    <!-- Linha 1 (4 avatares) -->
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="avatar"><img src="imagens/CAUA.png" alt="Avatar 1">
+                            <h3 class="titulos">Cauã Menezes</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="avatar"><img src="imagens/GUILHERME_CAMILO.png" alt="Avatar 2">
+                            <h3 class="titulos">Guilherme Camilo</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="avatar"><img src="imagens/GUILERMEEE.png" alt="Avatar 3">
+                            <h3 class="titulos">Guilherme Rodrigues</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="avatar"><img src="imagens/GUSTAVO.png" alt="Avatar 4">
+                            <h3 class="titulos">Gustavo Henrique</h3>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="row justify-content-center mt-4">
+                    <!-- Linha 2 (4 avatares) -->
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="avatar"><img src="imagens/IGUINHO.png" alt="Avatar 5">
+                            <h3 class="titulos">Igor Galvão</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="avatar"><img src="imagens/LUAN.png" alt="Avatar 6">
+                            <h3 class="titulos">Luan Andrey</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="avatar"><img src="imagens/LUCAS.png" alt="Avatar 7">
+                            <h3 class="titulos">Lucas Araújo</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="avatar"><img src="imagens/NAUBER.png" alt="Avatar 8">
+                            <h3 class="titulos">Nauber Gutieres</h3>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="row justify-content-center mt-4">
+                    <!-- Linha 3 (3 avatares) -->
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <div class="avatar"><img src="imagens/REZENDE.png" alt="Avatar 9">
+                            <h3 class="titulos">Rafael Rezende</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <div class="avatar"><img src="imagens/TAISEY.png" alt="Avatar 10">
+                            <h3 class="titulos">Rafael Taisey</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <div class="avatar"><img src="imagens/SAMUEL.png" alt="Avatar 11">
+                            <h3 class="titulos">Samuel Gouvêa</h3>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="row justify-content-center mt-4">
+                    <!-- Linha 4 (2 avatares) -->
+                    <div class="col-md-6 col-sm-6 col-12">
+                        <div class="avatar"><img src="imagens/ESTEVAO.png" alt="Avatar 12">
+                            <h3 class="titulos">Estêvão Rada</h3>
+                            <h3 class="titulos"><span class="cor_estrelas"><i class="bi bi-star-fill"></i></span> Professor <span class="cor_estrelas"><i class="bi bi-star-fill"></i></span> </h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-12">
+                        <div class="avatar"><img src="imagens/LORRAN.png" alt="Avatar 13">
+                            <h3 class="titulos">Lorran Rodrigues</h3>
+                            <h3 class="titulos"><span class="cor_estrelas"><i class="bi bi-star-fill"></i></span> Professor <span class="cor_estrelas"><i class="bi bi-star-fill"></i></span> </h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="container textos">
+                <div class="text-box">
+                    <h1 class="titulos">T8Bits</h1>
+                    <p>
+                        A equipe <span class="batocera">T8Bits</span> é a criadora do projeto <span class="batocera">Arcadia</span>, o Projeto Integrador da 
+                        Unidade Curricular de Hardware do Técnico em Informática. Seu nome se deu origem através de um trocadilho entre T8 (Por ser a Turma 8) e 8-bits, uma
+                        unidade de medida utilizada para representar caracteres, imagens, processadores e jogos. Inicialmente uma turma com cerca de 30 alunos, eventualmente teve seu
+                        número diminuído para apenas 11 (Desconsiderando os professores).
+                    </p>
+                </div>
+            </section>
+    </section>
 
 </header>
-
-
-    <section class="container avatares">
-        <h2 class="titulos">Nossos Avatares</h2>
-
-        <div class="row justify-content-center">
-            <!-- Linha 1 (4 avatares) -->
-            <div class="col-md-3 col-sm-6 col-12">
-                <div class="avatar"><img src="imagens/avatar1.jpg" alt="Avatar 1">
-                    <h3 class="titulos">Cauã Menezes</h3>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-12">
-                <div class="avatar"><img src="imagens/avatar2.jpg" alt="Avatar 2">
-                    <h3 class="titulos">Guilherme Camilo</h3>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-12">
-                <div class="avatar"><img src="imagens/guilerme.png" alt="Avatar 3">
-                    <h3 class="titulos">Guilherme Rodrigues</h3>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-12">
-                <div class="avatar"><img src="imagens/avatar4.jpg" alt="Avatar 4">
-                    <h3 class="titulos">Gustavo Henrique</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="row justify-content-center mt-4">
-            <!-- Linha 2 (4 avatares) -->
-            <div class="col-md-3 col-sm-6 col-12">
-                <div class="avatar"><img src="imagens/Igor.png" alt="Avatar 5">
-                    <h3 class="titulos">Igor Galvão</h3>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-12">
-                <div class="avatar"><img src="imagens/Luan.png" alt="Avatar 6">
-                    <h3 class="titulos">Luan Andrey</h3>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-12">
-                <div class="avatar"><img src="imagens/Lucas.png" alt="Avatar 7">
-                    <h3 class="titulos">Lucas Araújo</h3>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-12">
-                <div class="avatar"><img src="imagens/avatar8.jpg" alt="Avatar 8">
-                    <h3 class="titulos">Nauber Gutieres</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="row justify-content-center mt-4">
-            <!-- Linha 3 (3 avatares) -->
-            <div class="col-md-4 col-sm-6 col-12">
-                <div class="avatar"><img src="imagens/avatar9.jpg" alt="Avatar 9">
-                    <h3 class="titulos">Rafael Rezende</h3>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-12">
-                <div class="avatar"><img src="imagens/Taisey.png" alt="Avatar 10">
-                    <h3 class="titulos">Rafael Taisey</h3>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-12">
-                <div class="avatar"><img src="imagens/avatar11.jpg" alt="Avatar 11">
-                    <h3 class="titulos">Samuel Gouvêa</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="row justify-content-center mt-4">
-            <!-- Linha 4 (2 avatares) -->
-            <div class="col-md-6 col-sm-6 col-12">
-                <div class="avatar"><img src="imagens/avatar12.jpg" alt="Avatar 12">
-                    <h3 class="titulos">Estêvão Rada</h3>
-                    <h3 class="titulos"><span class="cor_estrelas"><i class="bi bi-star-fill"></i></span> Professor <span class="cor_estrelas"><i class="bi bi-star-fill"></i></span> </h3>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-12">
-                <div class="avatar"><img src="imagens/avatar13.jpg" alt="Avatar 13">
-                    <h3 class="titulos">Lorran Rodrigues</h3>
-                    <h3 class="titulos"><span class="cor_estrelas"><i class="bi bi-star-fill"></i></span> Professor <span class="cor_estrelas"><i class="bi bi-star-fill"></i></span> </h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container textos">
-        <h1 class="titulos">T8Bits</h1>
-        <p>
-
-            A equipe <span class="batocera">T8Bits</span> é a criadora do projeto <span class="batocera">Arcadia</span>, o Projeto Integrador da 
-            Unidade Curricular de Hardware do Técnico em Informática. Seu nome se deu origem através de um trocadilho entre T8 (Por ser a Turma 8) e 8-bits, uma
-            unidade de medida utilizada para representar caracteres, imagens, processadores e jogos. Inicialmente uma turma com cerca de 30 alunos, eventualmente teve seu
-            número diminuído para apenas 11 (Desconsiderando os professores).
-
-        </p>
-    </section>
 
         <footer>
             <div class="footer-container">
