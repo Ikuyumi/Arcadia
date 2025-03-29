@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instalando o Batocera</title>
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -243,6 +244,13 @@
         .sidebar ul li a:hover {
             background: #222;
         }
+
+        .negrito {
+            font-family: 'RainyHearts', sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 
@@ -281,14 +289,14 @@
 
             <!-- 🎵 Controles de Música -->
             <audio id="musica" loop>
-                <source src="musicas/Grape Garden.mp3" type="audio/mpeg">
+                <source src="musicas/Game of Lamb.mp3" type="audio/mpeg">
             </audio>
             <button class="botao-musica" onclick="document.getElementById('musica').play()">🎵 Tocar Música</button>
             <button class="botao-musica" onclick="document.getElementById('musica').pause()">⏸️ Pausar Música</button>
 
         </header>
         <section class="container textos">
-            <h1 class="titulos">Tutorial de Instalação do Batocera</h1>
+            <h1 class="titulos negrito">Tutorial de Instalação do Batocera</h1>
 
             <p>
                 Gostaria de ter um fliperama na sua própria casa? Iremos ensinar o passo a passo de como instalar e
@@ -296,11 +304,11 @@
             </p>
             <br>
 
-            <h2 class="batocera">Passo 1: Imagem do Batocera</h2>
+            <h2 class="batocera negrito">Passo 1: Imagem do Batocera</h2>
 
             <p>
                 Antes de tudo, é necessário que você tenha uma imagem do Batocera. Para isso, você pode baixá-la em seu
-                site oficial: <a href="https://batocera.org" target="_blank">batocera.org</a> <br>
+                <a href="https://batocera.org" target="_blank">Site Oficial</a> <br>.
                 <img src="imagens/Download_Batocera.png" alt="Download Batocera" style="width: 70%; height: auto;"> <br>
                 Selecione "Download" na Navbar e baixe a versão para computadores.
                 
@@ -308,7 +316,7 @@
 
             <br>
 
-            <h2 class="batocera">Passo 2: Instalação do Sistema</h2>
+            <h2 class="batocera negrito">Passo 2: Instalação do Sistema</h2>
 
             <p>
                 Agora, com a imagem baixada, você pode utilizar um próprio computador ou um sistema como Arduíno para
@@ -323,13 +331,18 @@
                 <span class="textos3">"C:\Users\nome.de.usuario\Desktop\batocera-x86_64.img"</span> <span
                     class="textos3">"C:\Users\nome.de.usuario\Desktop\batocera-x86_64.vdi"</span> --format VDI <br>
                 Substitua as partes destacadas pelo caminho que a sua imagem do Batocera esteja baixada, e substitua também "nome.de.usuario" pelo nome de usuário do 
-                seu computador.
+                seu computador. 
             </p>
 
             <br>
 
-            <h2 class="batocera">Passo 3: Configuração do Batocera</h2>
+            <h2 class="batocera negrito">Passo 3: Configuração do Batocera</h2>
 
+            <p>
+                Agora, com o Batocera instalado, vamos configurá-lo e adicionar jogos. Antes de tudo, você pode escolher um tema para o seu Batocera no
+                <a href="https://batocera.org/themes.php" target="blank">Site Oficial</a>, veja as várias opções e escolha a que mais lhe agradar. <br>
+
+            </p>
 
         </section>
 
