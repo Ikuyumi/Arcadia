@@ -74,38 +74,6 @@
             color: black;
 }
 
- /* 🔐 Estilização da Seção de Login */
- .login-container {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: 10px;
-        border-radius: 8px;
-        display: flex;
-        gap: 5px;
-    }
-
-    .login-input {
-        padding: 5px;
-        border: none;
-        border-radius: 5px;
-        font-size: 14px;
-    }
-
-    .login-button {
-        background-color: #914BF2;
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .login-button:hover {
-        background-color: #914BF2;
-    }
-
     .logo-senac {
         max-width: 100%;
         height: auto;
@@ -253,7 +221,6 @@
                 <li><a href="equipe.htm"><i class="bi bi-people-fill"></i> Equipe T8Bits</a></li>
                 <li><a href="producao.htm"><i class="bi bi-tools"></i> Processo de Produção</a></li>
                 <li><a href="instalando_batocera.htm"><i class="bi bi-download"></i> Instalando Batocera</a></li>
-                <li><a href="perguntas_e_respostas.htm"><i class="bi bi-patch-question-fill"></i> Perguntas e Respostas</a></li>
             </ul>
         </nav>
 
@@ -275,13 +242,6 @@
         </audio>
         <button class="botao-musica" onclick="document.getElementById('musica').play()">🎵 Tocar Música</button>
         <button class="botao-musica" onclick="document.getElementById('musica').pause()">⏸️ Pausar Música</button>
-    
-        <!-- 🔐 Seção de Login -->
-        <div class="login-container">
-            <input type="text" placeholder="Usuário" class="login-input">
-            <input type="password" placeholder="Senha" class="login-input">
-            <button class="login-button">Entrar</button>
-        </div>
 
     </header>
     <section class="container textos">

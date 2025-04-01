@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
@@ -269,6 +268,30 @@
             font-weight: bold;
         }
 
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        .video-container video {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .video-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 24px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
     </style>
 </head>
 <body>
@@ -285,7 +308,6 @@
             <li><a href="index.htm"><i class="bi bi-house-door-fill"></i> Início</a></li>
             <li><a href="equipe.htm"><i class="bi bi-people-fill"></i> Equipe T8Bits</a></li>
             <li><a href="instalando_batocera.htm"><i class="bi bi-download"></i> Instalando Batocera</a></li>
-            <li><a href="perguntas_e_respostas.htm"><i class="bi bi-patch-question-fill"></i> Perguntas e Respostas</a></li>
         </ul>
     </nav>
 
@@ -321,17 +343,49 @@
         <p>Um fliperama por si só já era uma ideia do próprio SENAC para ser implementada, então a turma
             T8 do Técnico em Informática agarrou esta oportunidade e começou a trabalhar neste ambicioso
             projeto! <br> <br>
-            >Imagens/Vídeos do processo de produção<
-            <br> <br>
+        </p>
+    
+        <div class="video-container">
+            <video class="video" muted>
+                <source src="videos/Video-Demo 4.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+            <button class="video-button" onclick="toggleVideo(this)">▶️</button>
+        </div>
+        <p class="textos">
+            -Arcadia em seus estágios iniciais.
+        </p>
+        <br>
+        <p>
             Como dito anteriormente, utilizamos o Batocera como sistema operacional para o Arcadia, mas não
             foi algo de imediato. Testamos vários outros sistemas, como RetroPie, RetroArch, RetroBat, entre outros...
             até chegarmos no consenso de utilizar o Batocera, por fornecer melhores opções de navegação e customização.
-
+        </p>
+    
+        <div class="video-container">
+            <video class="video" muted>
+                <source src="videos/Video-Demo 2.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+            <button class="video-button" onclick="toggleVideo(this)">▶️</button>
+        </div>
+        <p class="textos">
+            -Street Fighter 2 no Arcadia
         </p>
     </section>
-    <!-- <section class="container textos">
-    <h2 class="titulos">Saiba Mais</h2>
-</section> -->
+
+<script>
+    function toggleVideo(button) {
+        var video = button.closest(".video-container").querySelector("video");
+        if (video.paused) {
+            video.play();
+            button.innerHTML = "⏸️";
+        } else {
+            video.pause();
+            button.innerHTML = "▶️";
+        }
+    }
+    </script>
 
 <footer>
     <div class="footer-container">
