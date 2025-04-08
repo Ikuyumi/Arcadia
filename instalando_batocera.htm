@@ -259,6 +259,10 @@
     color: #049DD9; 
 }
 
+.aviso {
+    font-family: 'RainyHearts', sans-serif;
+            color: red;
+}
     </style>
 </head>
 
@@ -306,18 +310,28 @@
 
             <p>
                 Gostaria de ter um fliperama na sua própria casa? Iremos ensinar o passo a passo de como instalar e
-                configurar o Batocera!
-            </p>
-            <br>
+                configurar o Batocera! <br> 
+                Aqui você pode conferir um vídeo ensinando todo o procedimento, mas caso preferir, também há a documentação mais abaixo.<br>
+
+                <section class="container my-5 text-center">
+                    <h3 class="negrito">-Tutorial de Instalação-</h3>
+                    <video width="80%" controls>
+                        <source src="videos/Opening-Batocera.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos HTML5.
+                    </video>
+                </section>
 
             <h2 class="batocera negrito">Passo 1: Imagem do Batocera</h2>
 
             <p>
-                Antes de tudo, é necessário que você tenha uma imagem do Batocera. Para isso, você pode baixá-la em seu
-                <a href="https://batocera.org" target="_blank">Site Oficial</a> <br>.
+                Antes de tudo, é necessário que você tenha uma imagem do Batocera e um Pen-Drive de <span class="batocera">no mínimo 16GB</span> de armazenamento. 
+                Então para começar, vamos baixar o Batocera em seu <a href="https://batocera.org" target="_blank">Site Oficial</a> <br>.
                 <img src="imagens/Download_Batocera.png" alt="Download Batocera" style="width: 70%; height: auto;"> <br>
-                Selecione "Download" na Navbar e baixe a versão para computadores.
-                
+                Selecione <span class="batocera">"Download" </span> na Navbar (Barrinha de cima) e baixe a versão para computadores. <br> <br>
+                Com a imagem baixada, você precisará de dois programas para prosseguir com a instalação: <br> <br>
+
+                <span class="batocera">1 - Um programa para descompactar arquivos (WinRar ou 7-Zip);</span> <br>
+                <span class="batocera">2 - Um programa que possa transformar seu Pen-Drive em uma mídia bootável (Ventoy ou Rufus).</span> <br>
             </p>
 
             <br>
@@ -325,19 +339,36 @@
             <h2 class="batocera negrito">Passo 2: Instalação do Sistema</h2>
 
             <p>
-                Agora, com a imagem baixada, você pode utilizar um próprio computador ou um sistema como Arduíno para
-                fazer a instalação do Sistema Operacional. Utilize programas
-                como Rufus ou Ventoy para criar uma mídia USB inicializável com o Batocera, para que quando você inicie
-                o seu dispositivo com a unidade USB conectada, a instalação do
-                Batocera já inicie automaticamente. <br>
+                Agora, com a imagem e os programas baixados, você pode utilizar um próprio computador ou um sistema como Arduíno para
+                fazer a instalação do Sistema Operacional do Batocera.
                 Caso você deseje utilizar o Batocera em uma Máquina Virtual, é necessário transformar a imagem dele em
-                VDI. Para isso, utilize o seguinte código: <br>
+                VDI. Para isso, utilize o seguinte código no prompt de comando do Windows: <span class="batocera">(Para ativar o Prompt, basta apertar
+                as teclas Windows + R e digitar "cmd")</span><br>
                 <br>
                 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" convertdd
                 <span class="textos3">"C:\Users\nome.de.usuario\Desktop\batocera-x86_64.img"</span> <span
                     class="textos3">"C:\Users\nome.de.usuario\Desktop\batocera-x86_64.vdi"</span> --format VDI <br>
                 Substitua as partes destacadas pelo caminho que a sua imagem do Batocera esteja baixada, e substitua também "nome.de.usuario" pelo nome de usuário do 
-                seu computador. 
+                seu computador. <br> <br>
+                Abra o Ventoy e selecione o seu Pen-Drive. <span class="aviso">Tenha em mente que TODOS os arquivos do Pen-Drive serão EXCLUÍDOS</span>, pois o Pen-Drive será
+                formatado. <br>
+                <img src="imagens/Imagem Ventoy.png" alt="Imagem Ventoy" style="width: 70%; height: auto;"> <br>
+                Clique em "Instalar" e aguarde. <br>
+                <img src="imagens/Ventoy Concluído.png" alt="Ventoy Concluído" style="width: 70%; height: auto;"> <br>
+                Após a instalação concluída, jogue a imagem do Batocera dentro do Pen-Drive já formatado, ele estará com o nome "Ventoy". 
+                Caso você tenha utilizado o Rufus ao invés do Ventoy, isso não será necessário, pois na própria interface do Rufus você 
+                já terá que ter selecionado a imagem do Batocera. <br>
+                Feito isso, insira o Pen-Drive no computador <span class="textos3">desligado</span>. Ligue-o e acesse a BIOS do computador. Para acessar a BIOS, é necessário apertar
+                alguma(s) tecla(s) específica(s), confira abaixo qual tecla você deve apertar para acessar a BIOS de acordo com a marca do seu computador: <br>
+                <img src="imagens/Teclas da BIOS.png" alt="Teclas da BIOS" style="width: 70%; height: auto;"> <br> 
+                Abaixo você confere uma interface de BIOS. <span class="textos3">Note que a interface de cada BIOS é diferente</span>, navegue com as setas do teclado até 
+                <span class="batocera">"Boot"</span> e mude a ordem de Boot para priorizar o seu Pen-Drive com o Ventoy. Depois disso, pressione <span class="batocera">F10</span> ou
+                vá até "Exit" e reinicie o computador salvando suas alterações. <br>
+                <img src="imagens/Tela da BIOS boot.png" alt="Tela da BIOS" style="width: 70%; height: auto;"> <br> <br>
+                <img src="imagens/Save & Exit BIOS.png" alt="Salvar e sair BIOS" style="width: 70%; height: auto;"> <br>    
+                Ao iniciar o computador, você irá se deparar com a tela do Ventoy. Basta selecionar a imagem do Batocera e apertar ENTER para iniciá-lo. Caso você tenha utilizado
+                o Rufus, o Batocera já iniciará automaticamente. <br>
+                <img src="imagens/Batocera Loading.jpg" alt="Tela de Carregamento Batocera" style="width: 70%; height: auto;"> <br>   
             </p>
 
             <br>
@@ -345,17 +376,32 @@
             <h2 class="batocera negrito">Passo 3: Configuração do Batocera</h2>
 
             <p>
-                Agora, com o Batocera instalado, vamos configurá-lo e adicionar jogos. Antes de tudo, você pode escolher um tema para o seu Batocera no
-                <a href="https://batocera.org/themes.php" target="blank">Site Oficial</a>, veja as várias opções e escolha a que mais lhe agradar. <br>
+                Agora é hora de configurar o nosso fliperama! <br>
                 Na tela inicial do Batocera, pressione a tecla espaço para abrir as configurações.
-                <img src="imagens/Arcadia-Print.png" alt="Arcadia Print" style="width: 70%; height: auto;"> <br> <br>
-                Vá na opção "Updates & Downloads" e depois "Themes", e então baixe o que você desejar. Para aplicar o tema, navegue até a opção "User Interface & Settings" e selecione 
-                seu tema.
-                Na opção "Controller & Bluetooth", é possível configurar os seus inputs (Mapeamento dos botões).
-                Para adicionar jogos, baixe a ROM/ISO do jogo que você deseja adicionar. Após isso, pressione F1 no Batocera para acessar seus arquivos locais. <br>
-                <img src="imagens/Arcadia-Print-Files.png" alt="Arcadia Print Files" style="width: 70%; height: auto;"> <br>
+                <img src="imagens/Arcadia-Print.png" alt="Arcadia Print" style="width: 70%; height: auto;"> <br>
+                Para trocar o idioma, vá até <span class="batocera">"System Settings", "Language (Region)"</span> e selecione "Português Brasileiro" <br>
+                <img src="imagens/Linguagem.png" alt="Linguagem do Batocera" style="width: 70%; height: auto;"> <br>
+                Na opção <span class="batocera">"Controller & Bluetooth"/"Ajustes de Controle e Bluetooth"</span>, é possível configurar os seus inputs 
+                (Mapeamento dos botões), se você tiver um controle Bluetooth ou USB, também poderá utilizá-lo. <br>
+                Em <span class="batocera">"Ajustes de Rede"/"Network Settings"</span>, você poderá configurar o Wi-Fi: <br>
+                <img src="imagens/Ajustes de Rede.png" alt="Ajustes de Rede" style="width: 70%; height: auto;"> <br>
+                Para escolher um tema para o seu Batocera, vá na opção <span class="batocera">"Updates & Downloads"/"Atualizações e Transferências"</span> 
+                e depois <span class="batocera">"Themes"/"Temas".</span>
+                Você pode conferir a lista de temas no próprio Batocera ou no <a href="https://batocera.org/themes.php" target="blank">Site Oficial</a>, 
+                veja as várias opções e escolha a que mais lhe agradar. Basta selecioná-la, clicar em "Instalar" e depois ir em 
+                <span class="batocera">User Interface Settings/"Ajustes de Interface do Usuário"</span> e selecionar o tema. <br>
+                <img src="imagens/Aplicando Tema.png" alt="Aplicando Tema" style="width: 70%; height: auto;"> <br>
+                Por fim, para adicionar jogos, existem duas formas: <br> <br>
+                <span class="batocera">1 - Utilizar outro Pen-Drive para armazenar os jogos;</span> <br>
+                <span class="batocera">2 - Utilizar outro computador para transferir os jogos via SAMBA.</span> <br> <br>
+                
+                Baixe a ROM/ISO do(s) jogo(s) que você deseja adicionar. 
+                Com o método do Pen-Drive, pressione F1 no Batocera para acessar seus arquivos locais. <br>
+                <img src="imagens/Pen-Drive Batocera.png" alt="Arcadia Print Files" style="width: 70%; height: auto;"> <br>
                 Adicione os jogos na pasta "Roms", é importante que você adicione cada jogo ao seu respectivo console (Ex: Super Mario Bros. em "nes" | Sonic the Hedgehog em "Mega Drive"...). 
                 Assim que você adicionar os jogos, eles já aparecerão automaticamente na tela principal do Batocera, todos em seus respectivos grupos.
+
+                
 
 
             </p>
