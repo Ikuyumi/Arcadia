@@ -211,6 +211,25 @@
             font-weight: bold;
         }
 
+        #player-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #222;
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+
+#botao-musica {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
     </style>
 </head>
 <body>
@@ -243,13 +262,6 @@
         <section class="container">
             <img src="imagens/Arcadia.gif" alt="Nome da Empresa" style="max-width: 100%; height: auto;">
         </section>
-        
-        <!-- 🎵 Controles de Música -->
-        <audio id="musica" loop>
-            <source src="musicas/Grape Garden.mp3" type="audio/mpeg">
-        </audio>
-        <button class="botao-musica" onclick="document.getElementById('musica').play()">🎵 Tocar Música</button>
-        <button class="botao-musica" onclick="document.getElementById('musica').pause()">⏸️ Pausar Música</button>
 
     </header>
     <section class="container textos">
@@ -275,23 +287,23 @@
 
 </body>
 
-<footer>
-        <!-- LOGO do SENAC -->
-        <div class="footer-column">
-            <a href="https://www.sp.senac.br/" target="_blank">
-                <img src="imagens/Senac.png" alt="Saiba Mais" class="logo-senac">
-            </a>
-        </div>
-    </div>
-</footer>
-    <footer>
-        <p>&copy; 2025 SENAC-Pinda. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
 
-</head>
-<body>
+<footer>
+    <div class="footer-column">
+        <a href="https://www.sp.senac.br/" target="_blank">
+            <img src="imagens/Senac.png" alt="Saiba Mais" class="logo-senac">
+        </a>
+    </div>
+    <p>&copy; 2025 SENAC-Pinda. Todos os direitos reservados.</p>
+</footer>
+
+<audio id="musicas" preload="auto"></audio>
+    <div id="player-popup">
+        <audio id="musicas"></audio>
+        <button onclick="toggleMusica()" id="botao-musica">🎵</button>
+    </div>
+
+    <script src="playlist.js"></script>
     
 </body>
 </html>

@@ -268,6 +268,25 @@
     color: #049DD9; 
 }
 
+#player-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #222;
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+
+#botao-musica {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
     </style>
 </head>
 <body>
@@ -304,12 +323,6 @@
             <img src="imagens/Arcadia.gif" alt="Nome da Empresa" style="max-width: 100%; height: auto;">
         </section>
         
-        <!-- 🎵 Controles de Música -->
-        <audio id="musica" loop>
-            <source src="musicas/Leaning Dream.mp3" type="audio/mpeg">
-        </audio>
-        <button class="botao-musica" onclick="document.getElementById('musica').play()">🎵 Tocar Música</button>
-        <button class="botao-musica" onclick="document.getElementById('musica').pause()">⏸️ Pausar Música</button>
 
     </header>
     
@@ -336,8 +349,19 @@
             Como dito anteriormente, utilizamos o Batocera como sistema operacional para o Arcadia, mas não
             foi algo de imediato. Testamos vários outros sistemas, como RetroPie, RetroArch, RetroBat, entre outros...
             até chegarmos no consenso de utilizar o Batocera, por fornecer melhores opções de navegação e customização.
-        </p>
+        </p> <br> 
     
+        <img src="imagens/Produção Batocera (2).jfif" alt="Produção Batocera" style="width: 60%; height: auto;"> <br> <br>
+        <img src="imagens/Produção Batocera (3).jfif" alt="Produção Batocera" style="width: 50%; height: auto;"> <br>
+        <p class="textos">
+            -Colando os adesivos na carcaça do Batocera.
+        </p>
+
+        <img src="imagens/Produção Batocera (1).jfif" alt="Produção Batocera" style="width: 50%; height: auto;"> <br>
+        <p class="textos">
+            -Adesivos devidamente colados.
+        </p>
+        
         <div class="video-container">
             <video class="video" muted>
                 <source src="videos/Video-Demo 2.mp4" type="video/mp4">
@@ -346,7 +370,7 @@
             <button class="video-button" onclick="toggleVideo(this)">▶️</button>
         </div>
         <p class="textos">
-            -Rushing Beat Ran no Arcadia
+            -Rushing Beat Ran no Arcadia.
         </p>
     </section>
 
@@ -364,24 +388,19 @@
     </script>
 
 <footer>
-    <div class="footer-container">
-
-        <!-- LOGO do SENAC -->
-        <div class="footer-column">
-            <a href="https://www.sp.senac.br/" target="_blank">
-                <img src="imagens/Senac.png" alt="Saiba Mais" class="logo-senac">
-            </a>
-        </div>
+    <div class="footer-column">
+        <a href="https://www.sp.senac.br/" target="_blank">
+            <img src="imagens/Senac.png" alt="Saiba Mais" class="logo-senac">
+        </a>
     </div>
+    <p>&copy; 2025 SENAC-Pinda. Todos os direitos reservados.</p>
 </footer>
-    <footer>
-        <p>&copy; 2025 SENAC-Pinda. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
 
-</head>
-<body>
-    
+<div id="player-popup">
+    <audio id="musicas"></audio>
+    <button onclick="toggleMusica()" id="botao-musica">🎵</button>
+</div>
+    <script src="js/playlist.js"></script>
+
 </body>
 </html>
