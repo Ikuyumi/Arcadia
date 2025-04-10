@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produção</title>
     <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -17,18 +18,22 @@
             background-color: black;
             color: white;
         }
+
         header {
             background-color: black;
             color: white;
             padding: 20px;
         }
+
         section {
             padding: 20px;
         }
+
         .container {
             max-width: 1200px;
             margin: auto;
         }
+
         footer {
             background-color: #333;
             color: white;
@@ -39,27 +44,28 @@
         }
 
         .textos {
-    font-family: 'RainyHearts', sans-serif;
-    font-size: 30px;
-    color: white;
-}
-
-.textos2 {
             font-family: 'RainyHearts', sans-serif;
-    color: #2A558C;
+            font-size: 30px;
+            color: white;
+        }
+
+        .textos2 {
+            font-family: 'RainyHearts', sans-serif;
+            color: #2A558C;
         }
 
         .titulos {
             font-family: 'RainyHearts', sans-serif;
-    font-size: 50px;
-    color: #2A558C;
+            font-size: 50px;
+            color: #2A558C;
         }
+
         @font-face {
-    font-family: 'RainyHearts';
-    src: url('fonts/rainyhearts.ttf') format('truetype'); 
-    font-weight: normal;
-    font-style: normal;
-}
+            font-family: 'RainyHearts';
+            src: url('fonts/rainyhearts.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
         .batocera {
             color: #05C7F2;
@@ -69,114 +75,117 @@
             background-color: #C1C1C1;
             font-family: 'RainyHearts', sans-serif;
             color: black;
-}
-
-    .logo-senac {
-        max-width: 100%;
-        height: auto;
-        width: 200px;
-        display: block;
-        margin: 20px auto; /* Centraliza a imagem */
-        border-radius: 10px; /* Borda arredondada opcional */
-        transition: transform 0.2s;
-    }
-
-    .logo-senac:hover {
-        transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-    }
-
-     /* 🔹 Rodapé */
-     footer {
-        background-color: #333;
-        color: white;
-        padding: 20px 10px;
-        text-align: center;
-        font-family: 'RainyHearts', sans-serif;
-    }
-
-    .footer-container {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        max-width: 1200px;
-        margin: auto;
-    }
-
-    .footer-column {
-        flex: 1;
-        min-width: 200px;
-        margin: 10px;
-    }
-
-    .footer-column h3 {
-        font-size: 30px;
-        margin-bottom: 10px;
-        color: #5681A6;
-    }
-
-    .footer-column a {
-        display: block;
-        color: white;
-        text-decoration: none;
-        margin: 5px 0;
-        transition: color 0.3s;
-    }
-
-    .footer-column a:hover {
-        color: #05C7F2;
-    }
-
-    .footer-copy {
-        margin-top: 20px;
-        font-size: 14px;
-    }
-
-    /* 🔹 Responsividade */
-    @media (max-width: 768px) {
-        .footer-container {
-            flex-direction: column;
-            text-align: center;
         }
-    }
 
-    /* 🔹 Estilização do Link "Página Inicial" */
-    .pagina-inicial {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: 10px 15px;
-        border-radius: 8px;
-        font-family: 'RainyHearts', sans-serif;
-    }
+        .logo-senac {
+            max-width: 100%;
+            height: auto;
+            width: 200px;
+            display: block;
+            margin: 20px auto;
+            /* Centraliza a imagem */
+            border-radius: 10px;
+            /* Borda arredondada opcional */
+            transition: transform 0.2s;
+        }
 
-    .pagina-inicial a {
-        text-decoration: none;
-        font-size: 20px;
-        color: #077336;
-        font-weight: bold;
-        transition: color 0.3s;
-    }
+        .logo-senac:hover {
+            transform: scale(1.05);
+            /* Efeito de zoom ao passar o mouse */
+        }
 
-    .pagina-inicial a:hover {
-        color: #05C7F2;
-    }
+        /* 🔹 Rodapé */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            font-family: 'RainyHearts', sans-serif;
+        }
 
-    /* 🔹 Responsividade */
-    @media (max-width: 768px) {
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+
+        .footer-column h3 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #5681A6;
+        }
+
+        .footer-column a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 5px 0;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: #05C7F2;
+        }
+
+        .footer-copy {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        /* 🔹 Responsividade */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* 🔹 Estilização do Link "Página Inicial" */
         .pagina-inicial {
-            top: 10px;
-            left: 10px;
-            padding: 8px 12px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-family: 'RainyHearts', sans-serif;
         }
 
         .pagina-inicial a {
-            font-size: 14px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #077336;
+            font-weight: bold;
+            transition: color 0.3s;
         }
-    }
 
-      /* 🔹 Sidebar */
-      .sidebar {
+        .pagina-inicial a:hover {
+            color: #05C7F2;
+        }
+
+        /* 🔹 Responsividade */
+        @media (max-width: 768px) {
+            .pagina-inicial {
+                top: 10px;
+                left: 10px;
+                padding: 8px 12px;
+            }
+
+            .pagina-inicial a {
+                font-size: 14px;
+            }
+        }
+
+        /* 🔹 Sidebar */
+        .sidebar {
             position: fixed;
             top: 0;
             left: 0;
@@ -242,10 +251,12 @@
             max-width: 300px;
             margin: 20px auto;
         }
+
         .video-container video {
             width: 100%;
             border-radius: 10px;
         }
+
         .video-button {
             position: absolute;
             top: 50%;
@@ -261,34 +272,97 @@
         }
 
         .sidebar ul li a {
-    color: #32A65A; 
-}
+            color: #32A65A;
+        }
 
-.sidebar ul li a:hover {
-    color: #049DD9; 
-}
+        .sidebar ul li a:hover {
+            color: #049DD9;
+        }
 
-#player-popup {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #222;
-    padding: 10px 15px;
-    border-radius: 50px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    z-index: 9999;
-}
+        #player-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #222;
+            padding: 10px 15px;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
 
-#botao-musica {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-}
+        #botao-musica {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
 
+        #player-popup {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #player-popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #222;
+            padding: 10px 15px;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #botao-musica,
+        #botao-anterior,
+        #botao-proxima,
+        #botao-shuffle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0 5px;
+        }
+
+        /* Estilo do botão de shuffle ativado */
+        #botao-shuffle.ativo {
+            color: rgba(5, 199, 242, 0.2) !important;
+            border-radius: 50%;
+        }
+
+        /* Animações para as notificações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Botão de Toggle -->
@@ -308,24 +382,24 @@
 
     <script>
         // Script para abrir/fechar a sidebar
-        document.getElementById("toggleSidebar").addEventListener("click", function() {
+        document.getElementById("toggleSidebar").addEventListener("click", function () {
             document.getElementById("sidebar").classList.toggle("show");
         });
     </script>
 
     <header>
-         <!-- 🔹 Link "Página Inicial" no canto superior esquerdo -->
-    <!-- <div class="pagina-inicial">
+        <!-- 🔹 Link "Página Inicial" no canto superior esquerdo -->
+        <!-- <div class="pagina-inicial">
         <a href="index.htm">Página Inicial</a>
     </div>
      -->
         <section class="container">
             <img src="imagens/Arcadia.gif" alt="Nome da Empresa" style="max-width: 100%; height: auto;">
         </section>
-        
+
 
     </header>
-    
+
 
     <section class="container textos">
         <h2 class="titulos negrito">Processo de Produção do Arcadia</h2>
@@ -333,25 +407,25 @@
             T8 do Técnico em Informática agarrou esta oportunidade e começou a trabalhar neste ambicioso
             projeto! <br> <br>
         </p>
-    
-        <div class="video-container">
-            <video class="video" muted>
-                <source src="videos/Video-Demo 4.mp4" type="video/mp4">
-                Seu navegador não suporta vídeos.
-            </video>
-            <button class="video-button" onclick="toggleVideo(this)">▶️</button>
-        </div>
+
+        <h2 class="titulos negrito">Design</h2>
+        <img src="imagens/Design (1).jfif" alt="Design 1" style="width: 50%; height: auto;"> <br>
+        <img src="imagens/Design (1).png" alt="Design 2" style="width: 50%; height: auto;"> <br>
+        <img src="imagens/Design (3).png" alt="Design 3" style="width: 50%; height: auto;"> <br>
+        <img src="imagens/Design (2).jfif" alt="Design 4" style="width: 50%; height: auto;"> <br>
+        <img src="imagens/Design (2).png" alt="Design 5" style="width: 50%; height: auto;"> <br>
         <p class="textos">
-            -Arcadia em seus estágios iniciais.
+            -Acima você pode conferir as artes do Arcadia, seus modelos iniciais e protótipos.
         </p>
-        <br>
         <p>
             Como dito anteriormente, utilizamos o Batocera como sistema operacional para o Arcadia, mas não
             foi algo de imediato. Testamos vários outros sistemas, como RetroPie, RetroArch, RetroBat, entre outros...
             até chegarmos no consenso de utilizar o Batocera, por fornecer melhores opções de navegação e customização.
-        </p> <br> 
-    
-        <img src="imagens/Produção Batocera (2).jfif" alt="Produção Batocera" style="width: 60%; height: auto;"> <br> <br>
+        </p> <br>
+
+        <h2 class="titulos negrito">Montagem</h2>
+        <img src="imagens/Produção Batocera (2).jfif" alt="Produção Batocera" style="width: 60%; height: auto;"> <br>
+        <br>
         <img src="imagens/Produção Batocera (3).jfif" alt="Produção Batocera" style="width: 50%; height: auto;"> <br>
         <p class="textos">
             -Colando os adesivos na carcaça do Batocera.
@@ -360,47 +434,50 @@
         <img src="imagens/Produção Batocera (1).jfif" alt="Produção Batocera" style="width: 50%; height: auto;"> <br>
         <p class="textos">
             -Adesivos devidamente colados.
-        </p>
-        
-        <div class="video-container">
-            <video class="video" muted>
-                <source src="videos/Video-Demo 2.mp4" type="video/mp4">
-                Seu navegador não suporta vídeos.
-            </video>
-            <button class="video-button" onclick="toggleVideo(this)">▶️</button>
-        </div>
+        </p> <br>
+        <img src="imagens/Peças.jfif" alt="Peças" style="width: 50%; height: auto;"> <br>
         <p class="textos">
-            -Rushing Beat Ran no Arcadia.
-        </p>
+            -Peças do Arcadia.
+        </p> <br>
+
+
+
+
     </section>
 
-<script>
-    function toggleVideo(button) {
-        var video = button.closest(".video-container").querySelector("video");
-        if (video.paused) {
-            video.play();
-            button.innerHTML = "⏸️";
-        } else {
-            video.pause();
-            button.innerHTML = "▶️";
+    <script>
+        function toggleVideo(button) {
+            var video = button.closest(".video-container").querySelector("video");
+            if (video.paused) {
+                video.play();
+                button.innerHTML = "⏸️";
+            } else {
+                video.pause();
+                button.innerHTML = "▶️";
+            }
         }
-    }
     </script>
 
-<footer>
-    <div class="footer-column">
-        <a href="https://www.sp.senac.br/" target="_blank">
-            <img src="imagens/Senac.png" alt="Saiba Mais" class="logo-senac">
-        </a>
-    </div>
-    <p>&copy; 2025 SENAC-Pinda. Todos os direitos reservados.</p>
-</footer>
+    <footer>
+        <div class="footer-column">
+            <a href="https://www.sp.senac.br/" target="_blank">
+                <img src="imagens/Senac.png" alt="Saiba Mais" class="logo-senac">
+            </a>
+        </div>
+        <p>&copy; 2025 SENAC-Pinda. Todos os direitos reservados.</p>
+    </footer>
 
-<div id="player-popup">
-    <audio id="musicas"></audio>
-    <button onclick="toggleMusica()" id="botao-musica">🎵</button>
-</div>
-    <script src="js/playlist.js"></script>
+    <audio id="musicas" preload="auto"></audio>
+    <div id="player-popup">
+        <button id="botao-anterior">⏮</button>
+        <button id="botao-musica">▶️</button>
+        <button id="botao-proxima">⏭</button>
+        <button id="botao-shuffle">🔀</button>
+        <span id="contador-musica">1/84</span>
+    </div>
+
+    <script src="playlist.js"></script>
 
 </body>
+
 </html>
